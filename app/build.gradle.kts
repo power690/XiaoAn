@@ -55,9 +55,9 @@ android {
     }
 }
 
-val sherpaModelUrl = "https://github.com/qwq163/Xiao-An-Voice-Assistant/releases/download/model/model.onnx"
+val sherpaModelUrl = "https://github.com/sidhu-master/XiaoAn/releases/download/model/model.onnx"
 val sherpaModelFile = layout.projectDirectory.file("src/main/assets/sherpa-model/model.onnx").asFile
-val shizukuGuideUrl = "https://github.com/qwq163/Xiao-An-Voice-Assistant/releases/download/gif/shizuku_guide.gif"
+val shizukuGuideUrl = "https://github.com/sidhu-master/XiaoAn/releases/download/gif/shizuku_guide.gif"
 val shizukuGuideFile = layout.projectDirectory.file("src/main/assets/shizuku_guide.gif").asFile
 
 tasks.register("downloadSherpaModel") {
