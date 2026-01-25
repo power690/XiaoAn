@@ -1,0 +1,106 @@
+<resources>
+    <string name="app_name">小安语音助手</string>
+    <string name="accessibility_service_description">小安 AI 代理服务，用于自动化手机操作。</string>
+
+    <string name="chat_title">小安</string>
+    <string name="input_placeholder">输入你的指令...</string>
+    <string name="send_button">发送</string>
+    <string name="accessibility_error">请先开启无障碍服务</string>
+    <string name="enable_action">去开启</string>
+    <string name="overlay_error">请授予悬浮窗权限</string>
+    <string name="grant_action">去授权</string>
+    <string name="welcome_message">欢迎使用 小安\n我可以帮你操作手机。\n试着说："帮我看看天气"</string>
+
+    <string name="menu_clear_history">清空聊天记录</string>
+    <string name="menu_settings">设置</string>
+    <string name="history_cleared">聊天记录已清空</string>
+
+    <string name="settings_title">设置</string>
+    <string name="api_key_label">API Key</string>
+    <string name="edit_api_key">修改 API Key</string>
+    <string name="enter_api_key">填入 API Key</string>
+    <string name="hide_api_key">隐藏 API Key</string>
+    <string name="show_api_key">显示 API Key</string>
+    <string name="api_key_placeholder">请输入您的 API Key</string>
+    <string name="current_model">当前模型: %1$s</string>
+    <string name="cancel">取消</string>
+    <string name="save">保存</string>
+    <string name="back">返回</string>
+    <string name="close">关闭</string>
+    <string name="device_admin_description">激活设备管理器以支持熄屏唤醒功能</string>
+    <string name="screen_off_wake_title">熄屏唤醒</string>
+    <string name="screen_off_wake_hint">熄屏状态下唤醒并自动解锁屏幕</string>
+    <string name="screen_off_wake_enable">启用熄屏唤醒</string>
+    <string name="screen_off_wake_disable">熄屏唤醒已禁用</string>
+    <string name="device_admin_required">需要激活设备管理器权限才能使用此功能</string>
+   
+    <string name="hide_recents_title">隐藏后台</string>
+    <string name="hide_recents_desc">开启后，应用将不会显示在最近任务列表中</string>
+
+    <string name="wake_up_title">语音唤醒</string>
+    <string name="wake_up_enable">启用语音唤醒</string>
+    <string name="wake_up_disable">语音唤醒已禁用</string>
+    <string name="wake_up_wake_word_label">唤醒词</string>
+    <string name="wake_up_wake_word_hint">请输入唤醒词</string>
+    <string name="wake_up_save">保存唤醒词</string>
+    <string name="wake_up_saved">唤醒词已保存</string>
+    <string name="wake_up_clear">清空</string>
+    <string name="wake_up_status_listening">正在监听唤醒词...</string>
+    <string name="wake_up_status_wakeup">唤醒成功！</string>
+    <string name="wake_up_status_speaking">正在听取指令...</string>
+    <string name="wake_up_status_timeout">唤醒超时</string>
+    <string name="wake_up_status_error">唤醒错误</string>
+
+    <string name="fw_ready">准备就绪</string>
+    <string name="fw_running">小安 运行中</string>
+    <string name="fw_error_title">小安 出错</string>
+    <string name="fw_ready_title">小安 就绪</string>
+    <string name="fw_stop">停止</string>
+    <string name="fw_return_app">返回应用</string>
+
+    <string name="status_stopped">已停止</string>
+    <string name="error_api_key_missing">请先设置 API Key</string>
+    <string name="error_service_not_connected">服务未连接。请尝试在设置中关闭并重新开启无障碍服务。</string>
+    <string name="status_thinking">思考中...</string>
+    <string name="error_screenshot_failed">截图失败</string>
+    <string name="error_last_action_failed">上一个动作执行失败。</string>
+    <string name="error_runtime_exception">运行异常: %1$s</string>
+    <string name="error_task_terminated_max_steps">任务终止：达到最大步数</string>
+    <string name="error_executor_null">执行器为空 (服务可能已停止)</string>
+
+    <string name="action_tap">点击屏幕</string>
+    <string name="action_double_tap">双击屏幕</string>
+    <string name="action_long_press">长按屏幕</string>
+    <string name="action_swipe">滑动屏幕</string>
+    <string name="action_type">输入文本: %1$s</string>
+    <string name="action_launch">打开 %1$s</string>
+    <string name="action_back">返回</string>
+    <string name="action_home">回到桌面</string>
+    <string name="action_wait">等待中</string>
+    <string name="action_finish">任务完成</string>
+    <string name="action_error">出错: %1$s</string>
+    <string name="action_unknown">未知动作</string>
+
+    <string name="prompt_date_prefix">今天的日期是: </string>
+
+    <string name="voice_permission_granted">已授权，请按住说话</string>
+    <string name="voice_permission_denied">权限被拒绝</string>
+    <string name="voice_release_to_send">松开发送</string>
+    <string name="voice_model_downloading">正在下载模型... %1$d%%</string>
+    <string name="voice_model_unzipping">正在解压模型...</string>
+    <string name="voice_model_loading">正在加载模型...</string>
+    <string name="voice_model_load_failed">模型加载失败 (点击重试)</string>
+    <string name="voice_model_initializing">正在初始化语音模型...</string>
+    <string name="voice_hold_to_speak">按住 说话</string>
+    <string name="voice_listening">正在聆听...</string>
+    <string name="switch_input_mode">切换输入模式</string>
+    <string name="voice_cancel">取消</string>
+
+    <string name="privacy_title">隐私协议</string>
+    <string name="privacy_agree">同意并继续</string>
+    <string name="privacy_disagree">不同意</string>
+    <string name="privacy_content">感谢您使用小安语音助手！我们非常重视您的隐私保护，特此说明如下：\n\n一、权限使用说明\n1. 无障碍权限：用于模拟点击、滑动等操作，实现自动化任务。\n2. 读取应用列表权限：用于匹配您的语音指令与已安装的应用，实现精准启动。\n3. 设备管理器权限：仅用于熄屏唤醒功能中自动点亮和解锁屏幕，不用于其他管理操作。\n4. 录音权限：用于语音唤醒和语音指令识别。\n5. 悬浮窗权限：用于显示任务执行状态。\n6. 勿扰权限：用于在执行任务时控制系统的静音、振动及勿扰模式，以便精准控制音量状态。\n7. Shizuku权限：用于在无Root环境下执行高级系统控制指令（如开关WiFi、移动数据、飞行模式等），需配合Shizuku应用授权使用。\n\n二、数据安全承诺\n1. 语音唤醒功能完全在本地离线运行，所有语音数据在设备端处理，绝不会上传到云端。\n2. 语音指令识别功能同样完全本地端侧运行，不收集、存储或传输您的音频数据。\n3. 截图仅用于AI分析当前界面以执行自动化操作，处理完成后立即释放，不会保存或上传。\n4. 应用承诺不收集您的个人身份信息、通讯录、短信内容等隐私数据。\n\n三、用户权利\n1. 您可以随时在设置中关闭语音唤醒功能。\n2. 您可以随时清除所有聊天记录。\n3. 应用不会在后台收集数据。\n\n四、特别说明\n不同意本协议将无法使用应用功能，点击"不同意"将退出应用。</string>
+
+    <string name="manual_title">使用说明</string>
+    <string name="download_shizuku">下载 Shizuku (官网)</string>
+</resources>

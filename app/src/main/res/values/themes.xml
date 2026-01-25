@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 使用 Material3 的 DayNight 主题，支持深色模式切换 -->
+    <style name="Theme.AndroidAutoGLM" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item> <!-- 浅色模式下状态栏字体变黑 -->
+    </style>
+</resources>

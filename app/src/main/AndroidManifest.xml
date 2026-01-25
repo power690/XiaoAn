@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-sdk tools:overrideLibrary="rikka.shizuku.api, rikka.shizuku.provider" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <!-- 关键新增：控制勿扰模式和静音模式必须的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+
+    <!-- 关键新增：控制系统亮度必须的权限 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" tools:ignore="ProtectedPermissions" />
+
+    <uses-permission
+        android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- 关键权限：唤醒锁和禁用锁屏 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" tools:ignore="ProtectedPermissions" />
+
+    <!-- 新增：手电筒权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    
+    <!-- 新增：蓝牙权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
+    <!-- 新增：WiFi状态读取 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    
+    <!-- 新增：定位/热点等辅助权限声明 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <queries>
+        <intent>
+            <action android:name="android.speech.RecognitionService" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AndroidAutoGLM"
+        tools:targetApi="31">
+
+        <!-- 主 Activity，不再直接作为入口 -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:configChanges="uiMode|orientation|screenSize|screenLayout|keyboardHidden"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AndroidAutoGLM">
+            <!-- Intent filter 移至 Activity Alias -->
+        </activity>
+
+        <!-- ==================================================== -->
+        <!-- Activity Aliases for Dynamic Icons -->
+        <!-- ==================================================== -->
+
+        <!-- 0. Red -->
+        <activity-alias
+            android:name=".MainActivityRed"
+            android:targetActivity=".MainActivity"
+            android:icon="@drawable/ic_orb_red"
+            android:roundIcon="@mipmap/ic_launcher_red"
+            android:label="@string/app_name"
+            android:enabled="false"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <!-- 1. Orange -->
+        <activity-alias
+            android:name=".MainActivityOrange"
+            android:targetActivity=".MainActivity"
+            android:icon="@drawable/ic_orb_orange"
+            android:roundIcon="@mipmap/ic_launcher_orange"
+            android:label="@string/app_name"
+            android:enabled="false"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <!-- 2. Amber -->
+        <activity-alias
+            android:name=".MainActivityAmber"
+            android:targetActivity=".MainActivity"
+            android:icon="@drawable/ic_orb_amber"
+            android:roundIcon="@mipmap/ic_launcher_amber"
+            android:label="@string/app_name"
+            android:enabled="false"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <!-- 3. Green -->
+        <activity-alias
+            android:name=".MainActivityGreen"
+            android:targetActivity=".MainActivity"
+            android:icon="@drawable/ic_orb_green"
+            android:roundIcon="@mipmap/ic_launcher_green"
+            android:label="@string/app_name"
+            android:enabled="false"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <!-- 4. Cyan -->
+        <activity-alias
+            android:name=".MainActivityCyan"
+            android:targetActivity=".MainActivity"
+            android:icon="@drawable/ic_orb_cyan"
+            android:roundIcon="@mipmap/ic_launcher_cyan"
+            android:label="@string/app_name"
+            android:enabled="false"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <!-- 5. Blue (Default) - Enabled by default -->
+        <activity-alias
+            android:name=".MainActivityBlue"
+            android:targetActivity=".MainActivity"
+            android:icon="@drawable/ic_orb_blue"
+            android:roundIcon="@mipmap/ic_launcher_blue"
+            android:label="@string/app_name"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <!-- 6. Purple -->
+        <activity-alias
+            android:name=".MainActivityPurple"
+            android:targetActivity=".MainActivity"
+            android:icon="@drawable/ic_orb_purple"
+            android:roundIcon="@mipmap/ic_launcher_purple"
+            android:label="@string/app_name"
+            android:enabled="false"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <!-- 设备管理器 Receiver -->
+        <receiver
+            android:name=".receiver.MyDeviceAdminReceiver"
+            android:description="@string/device_admin_description"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_DEVICE_ADMIN"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin" />
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".AutoGLMService"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+            android:exported="true"
+            android:foregroundServiceType="microphone">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config" />
+        </service>
+
+        <service
+            android:name=".AutoGLMInputMethodService"
+            android:label="小安输入(安心输入)"
+            android:permission="android.permission.BIND_INPUT_METHOD"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.view.InputMethod" />
+            </intent-filter>
+            <meta-data
+                android:name="android.view.im"
+                android:resource="@xml/method" />
+        </service>
+
+        <provider
+            android:name="rikka.shizuku.ShizukuProvider"
+            android:authorities="${applicationId}.shizuku"
+            android:multiprocess="false"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.INTERNET" />
+            
+    </application>
+
+</manifest>
